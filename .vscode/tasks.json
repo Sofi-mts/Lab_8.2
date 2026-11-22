@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Збірка C++ (MSVC)",
+            "type": "process",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}\\build.ps1",
+                "${file}",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": ["$msCompile"],
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
